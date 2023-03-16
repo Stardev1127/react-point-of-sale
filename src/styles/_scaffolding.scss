@@ -1,0 +1,52 @@
+.app-wrapper {
+  //min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  .app-sidebar {
+    height: calc(100vh - 58px);
+    width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    &.menu-open {
+      flex-basis: 240px;
+      flex-shrink: 0;
+      padding: 16px;
+    }
+  }
+  .app-wrapper {
+    flex-grow: 1;
+    padding: 16px;
+  }
+}
+
+.app-sidebar {
+  background: $white;
+  position: relative;
+  ul {
+    li {
+      a {
+        color: $primary-color;
+        &.active {
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 16px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #999;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  &.fluid {
+    max-width: 100%;
+  }
+}
